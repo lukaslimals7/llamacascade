@@ -5,7 +5,7 @@ Python. Give it an objective: a planner turns it into numbered steps, an
 executor works through them with real tools (bash, read, write, edit,
 grep, find, ls), and a reviewer decides DONE or REPLAN.
 
-There is **no agent runtime** — roles are plain HTTP chat calls against
+There is **no agent runtime**  roles are plain HTTP chat calls against
 the llama.cpp router's OpenAI-compatible API, and the tools are Python
 functions. Python standard library only: no Node, no framework, no pip
 installs (`rich` is optional, only for the TUI).
@@ -213,4 +213,4 @@ Small models drift, so the harness is deliberately forgiving:
 | model id not found | copy ids from `curl -s $LLAMA_BASE_URL/models` |
 | executor runs zero tools, no file created | check the tool-call trace in `state/swarm.json` |
 | `completed` but nothing on disk | the ground-truth gate downgrades it — read `state/swarm.json` |
-| slow turns | 4 GB GPU: only one model resident — see §Model loading |
+| slow turns | 4 GB GPU: only one model resident — see Model loading |
