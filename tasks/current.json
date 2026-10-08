@@ -1,0 +1,13 @@
+{
+  "id": "plan-001",
+  "parent": null,
+  "owner": "cpm",
+  "status": "completed",
+  "objective": "check the uptime now",
+  "success_criteria": [],
+  "tasks": [
+    "Run the uptime command to display the system uptime information",
+    "Read and report the uptime output"
+  ],
+  "dependencies": []
+}
